@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*-------HEADER---------*/
+header{ 
+    background-color: aquamarine;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+.content-box{
+    background-color: chartreuse;
+    border: 3px solid black;
+}
+h1{
+    color: red;
+    background-color: orange;
+    text-align: center;
+    font-size: 35px;
+}
+.text-negro{
+    color: black;
+}
+/*-------MAIN-------------*/
+main section{
+    background-color: grey;
+}
+h2{
+    color: green;
+    background-color: yellow;
+    text-align: center;
+}
+h3{
+    color: blueviolet;
+    background-color: azure;
+
+}
+p{
+    color: aqua;
+}
+.text-blanco{
+   color: white;
+}
+/*-------FOOTER----------*/
+.text-azul{
+    color: blue;
+    background-color: bisque;
+}
