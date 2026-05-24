@@ -8,150 +8,184 @@
 </head>
 <body>
     <header>
-        <!-------Navegador------>
+        <!-------NAV------>
         <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="pages/menu.html">Menu</a></li>
-                <li><a href="pages/galeria.html">Galeria</a></li>
-                <li><a href="pages/nosotros.html">Nosotros</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-        <!----------Hero---------->
-        <section>
-            <div class="content-box">
-                <h1>Manos Jujeñas</h1>
-                <p class="text-negro">Donde el sabor se mezcla con la altura</p>
-                <button class="border-radius">
-                    Ver Menu
-                </button>
+            <div class="container">
+                <a href="#">Inicio</a>
+                <a href="#menu">Menu</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
             </div>
-        </section>   
+        </nav>
+        <!----------HERO---------->
+        <section>
+            <div class="hero" id="inicio">
+                <div class="hero-content">
+                    <h1>Manos Jujeñas</h1>
+                    <p>Donde el sabor se mezcla con la altura</p>
+                    <button class="btn" onclick="irMenu()">
+                        Ver Menu
+                    </button>
+                </div>
+            </div>
+        </section>
     </header>
-    <!----------Menu--------> 
+
+    <!----------MENU--------> 
     <main>
-        <section class="" id="menu">
-             <h2>Menu Jujeño</h2>
-          <section>
-            <option value="all">Todas las Categorias</option>
-            <option value="">Milanesas</option>
-            <option value="">Lomos</option>
-            <option value="">Platos Regionales</option>
-            <option value="">Postres</option>
-            <option value="">Bebidas</option>
-          </section>    
-             <div class="menu-grid">
-                <div class=""card milanesas>
-                    <img src="" alt="">
+        <section class="section" id="menu">
+            <h2 class="title">Menu Jujeño</h2>
+
+            <select onchange="filtrar(this.value)">
+                <option value="all">Todas las Categorias</option>
+                <option value="milanesas">Milanesas</option>
+                <option value="tamales">Tamales</option>
+                <option value="platosregionales">Platos Regionales</option>
+                <option value="postres">Postres</option>
+                <option value="bebidas">Bebidas</option>
+            </select>
+
+            <div class="menu-grid">
+
+                <div class="card milanesas">
+                    <img src="OIP.webp" alt="Milanesas">
                     <div class="card-content">
                         <h3>Milanesas</h3>
-                        <p class="text-verde">De Ternera y de Llama</p>
+                        <p>De Ternera y de Llama</p>
                         <div class="price">$5.000</div>
-                <button class="">
-                    Pedir
-                </button>
+                        <button class="orden-btn" onclick="pedir('Milanesas')">
+                            Pedir
+                        </button>
+                    </div>
                 </div>
-              </div>
-                <div class="card lomos">
-                    <img src="" alt="">
-                  <div class="card-content">
-                    <h3>Lomos de la Casa</h3>
-                    <p>De Llama y de Pollo</p>
-                    <div class="price">$8.000</div>
-                <button class="">
-                    Pedir  
-                </button>
-            </div>  
-        </div>
-            <div class="card Platos Regionales">
-                <h3>Nuestos Platos</h3>
-                <p>Bomba de Quinua Rellenas</p>
-                <div class="price">$6.000</div>
-                <button class="">
-                    Pedir 
+
+                <div class="card tamales">
+                    <img src="OIP-tamales.webp" alt="Tamales">
+                    <div class="card-content">
+                        <h3>Tamales</h3>
+                        <div class="price">$8.000</div>
+                        <button class="orden-btn" onclick="pedir('Tamales')">
+                            Pedir
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card platosregionales">
+                    <img src="OIP-quinua.webp" alt="Platos Regionales">
+                    <div class="card-content">
+                        <h3>Nuestros Platos</h3>
+                        <p>Bomba de Quinua Rellenas</p>
+                        <div class="price">$6.000</div>
+                        <button class="orden-btn" onclick="pedir('Nuestros Platos')">
+                            Pedir
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card postres">
+                    <img src="OIP-postres.webp" alt="Postres">
+                    <div class="card-content">
+                        <h3>Postres</h3>
+                        <p>Postres de la Abuela</p>
+                        <div class="price">$10.000</div>
+                        <button class="orden-btn" onclick="pedir('Postres')">
+                            Pedir
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card bebidas">
+                    <img src="OIP-vinos.webp" alt="Vinos">
+                    <div class="card-content">
+                        <h3>Vinos</h3>
+                        <p>Vinos con Altura</p>
+                        <div class="price">$15.000</div>
+                        <button class="orden-btn" onclick="pedir('Vinos')">
+                            Pedir
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--------GALERIA------------->
+        <section class="section" id="galeria">
+            <h2 class="title">Galeria</h2>
+            <div class="gallery">
+                <img src="OIP-lampreado.webp" alt="Lampreado">
+                <img src="OIP-tortilla.webp" alt="Tortilla">
+                <img src="OIP-picante de pollo.webp" alt="Picante de Pollo">
+                <img src="OIP-lomo de llama.webp" alt="Lomo de Llama">
+            </div>
+        </section>
+
+        <!---------NOSOTROS------------>
+        <section class="section" id="nosotros">
+            <h2 class="title">Nosotros</h2>
+            <div class="about">
+                <p class="text-blanco">En nuestras manos vivi la pasion de nuestros platos.
+                    Entre la montaña con sus colores intensos y atrapantes,
+                    creamos una experecia unica
+                </p>
+            </div>
+        </section>
+
+        <!--------CONTACTO------------->
+        <section class="section" id="contacto">
+            <h2 class="title">Contacto</h2>
+            <div class="contact-box">
+                <input type="text" placeholder="Nombre completo">
+                <input type="email" placeholder="Tu email">
+                <input type="text" placeholder="Tu mensaje">
+                <button class="btn">
+                    Enviar Mensaje
                 </button>
             </div>
+        </section>
+
+        <!---------CARRITO--------------->
+        <div id="cart">
+            Pedidos: <span id="contador">0</span>
         </div>
-        <div class="card Postres">
-            <img src="" alt="">
-            <div class="card-content">
-                <h3>Postres</h3>
-                <p>Postres de la Abuela</p>
-                <div class="price">$10.000</div>
-                <button class="">
-                    Pedir
-                </button>
-            </div>
-        </div>
-        <div class="card Bebidas">
-            <img src="" alt="">
-            <div class="card-content">
-                <h3>Vinos</h3>
-                <p>Vinos con Altura</p>
-                <div class="price">$15.000</div>
-                <button class="">
-                    Pedir
-                </button>
-            </div> 
-        </div>
-        </div>
-    </section>
-    <!--------Galeria------------->
-    <section class="section" id="galeria">
-        <h2 class="title">Galeria</h2>
-        <div class="gallery">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-    </section>
-    <!---------Nosotros------------>
-    <section class="section" id="nosotros">
-        <h2 class="title">Nosotros</h2>
-        <div class="about">
-            <p class="text-blanco">En nuestras manos vivi la pasion de nuestros platos.
-                Entre la montaña con sus colores intensos y atrapantes,
-                creamos una experecia unica
-            </p>
-        </div>
-    </section>
-    <!--------Contacto------------->
-    <section class="section" id="contacto">
-        <h2 class="title">Contacto</h2>
-        <div class="contact-box">
-            <input type="text" placeholder="nombre completo">
-            <input type="email" placeholder="Tu email">
-            <input type="text">
-            <button class="btn">
-                Enviar Mensaje
-            </button>
-        </div>
-    </section>
-    <!---------Carrito--------------->
-    <div id="cart">
-        Pedidos: <span id="contador">0</span>
-    </div>
+
     </main>
-    <!-------Footer-------->
+
+    <!-------FOOTER-------->
     <footer>
-        <p class="text-azul">
-            2026 Manos Jujeñas - Jujuy Argentina
-            Donde comienzan nuestras Raices
-        </p>
+        <p>2026 Manos Jujeñas - Jujuy Argentina</p>
     </footer>
 
+    <script>
+        let contador = 0;
 
+        function pedir(item) {
+            contador++;
+            document.getElementById('contador').textContent = contador;
+            alert('Agregaste: ' + item + '\nTotal de pedidos: ' + contador);
+        }
 
+        function irMenu() {
+            document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+        }
 
-
-            
-
-
-
-
-
+        function filtrar(valor) {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(function(card) {
+                if (valor === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.classList.contains(valor)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
