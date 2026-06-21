@@ -1,0 +1,151 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rye&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+.btn{
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: #420f25;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #91144a;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background: #272005;
+}
+/*--------------------SECCIONES--------------*/
+.section{
+    padding: 100px 40px;
+}
+.title{
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    color: #050402;
+    font-family: $font-titulo;
+}
+/*----------MENU------------*/
+select{
+    display: block;
+    margin: 0 auto 40px auto;
+    padding: 14px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+}
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.menu-grid-cate {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+}
+
+.price{
+    color: #00f5d4;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.orden-btn{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    background: $color-acento;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.orden-btn:hover{
+    background: $color-secundario;
+    color: black;
+}
+/*----------GALERIA------------*/
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.gallery img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.gallery img:hover{
+    transform: scale(1.05);
+}
+/*-------NOSOTROS ------*/
+.nosotros-hero {
+    width: 100%;
+    min-height: 350px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../Nosotros.png');
+    background-size: cover;
+    background-position: center;
+    @include flex-base;
+}
+
+.nosotros-hero .title {
+    color: $color-blanco;
+    margin-bottom: 0;
+}
+
+.nosotros-fila {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 80px;
+}
+
+.nosotros-fila img {
+    width: 45%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.nosotros-fila p {
+    width: 55%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: $color-blanco;
+}
+
+.nosotros-fila--invertida {
+    flex-direction: row-reverse;  /* Invierte el orden */
+}
+
+@media (max-width: 768px) {
+    .nosotros-fila,
+    .nosotros-fila--invertida {
+        flex-direction: column;
+        padding: 40px 30px;
+    }
+
+    .nosotros-fila img,
+    .nosotros-fila p {
+        width: 100%;
+    }
+}

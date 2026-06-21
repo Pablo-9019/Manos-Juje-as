@@ -10,23 +10,18 @@
     <header>
         <!-------NAV------>
         <nav>
-            <div class="container">
                 <a href="#">Inicio</a>
                 <a href="#menu">Menu</a>
                 <a href="#galeria">Galería</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#contacto">Contacto</a>
-            </div>
         </nav>
         <!----------HERO---------->
         <section>
             <div class="hero" id="inicio">
                 <div class="hero-content">
                     <h1>Manos Jujeñas</h1>
-                    <p>Donde el sabor va con la altura</p>
-                    <button class="btn" onclick="irMenu()">
-                        Ver Menu
-                    </button>
+                    <a href="#menu" class="btn">Ver Menu</a>
                 </div>
             </div>
         </section>
@@ -36,76 +31,40 @@
     <main>
         <section class="section" id="menu">
             <h2 class="title">Menu Jujeño</h2>
+            <div class="menu-grid-cate">
 
-            <select onchange="filtrar(this.value)">
-                <option value="all">Todas las Categorías</option>
-                <option value="milanesas">Milanesas</option>
-                <option value="tamales">Tamales</option>
-                <option value="platosregionales">Platos Regionales</option>
-                <option value="postres">Postres</option>
-                <option value="bebidas">Bebidas</option>
-            </select>
-
-            <div class="menu-grid">
-
-                <div class="card milanesas">
-                    <img src="OIP.webp" alt="Milanesas">
+                <div class="card entradas">
+                    <img src="Entrada.jpeg" alt="Entradas">
                     <div class="card-content">
-                        <h3>Milanesas</h3>
-                        <p>De Ternera y de Llama</p>
-                        <div class="price">$5.000</div>
-                        <button class="orden-btn" onclick="pedir('Milanesas')">
-                            Pedir
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card tamales">
-                    <img src="OIP-tamales.webp" alt="Tamales">
-                    <div class="card-content">
-                        <h3>Tamales</h3>
-                        <p>Un Sabor Unico</p>
-                        <div class="price">$8.000</div>
-                        <button class="orden-btn" onclick="pedir('Tamales')">
-                            Pedir
-                        </button>
+                        <h3>Entradas</h3>
+                        <p></p>
+                        <a href="entradas.html" class="btn">Ver</a>
                     </div>
                 </div>
 
                 <div class="card platosregionales">
-                    <img src="OIP-quinua.webp" alt="Platos Regionales">
+                    <img src="Platos Regionales.jpeg" alt="Platos Regionales">
                     <div class="card-content">
-                        <h3>Nuestros Platos</h3>
-                        <p>Bomba de Quinua Rellenas</p>
-                        <div class="price">$6.000</div>
-                        <button class="orden-btn" onclick="pedir('Nuestros Platos')">
-                            Pedir
-                        </button>
+                        <h3>Platos Regionales</h3>
+                        <p></p>
+                        <a href="platosregionales.html" class="btn">Ver</a>
                     </div>
                 </div>
 
                 <div class="card postres">
-                    <img src="OIP-postres.webp" alt="Postres">
+                    <img src="Nuestros Postres.jpeg" alt="Postres">
                     <div class="card-content">
                         <h3>Postres</h3>
-                        <p>Postres de la Abuela</p>
-                        <div class="price">$10.000</div>
-                        <button class="orden-btn" onclick="pedir('Postres')">
-                            Pedir
-                        </button>
+                        <p></p>
+                        <a href="postres.html" class="btn">Ver</a>
                     </div>
                 </div>
 
                 <div class="card bebidas">
-                    <img src="OIP-vinos.webp" alt="Vinos">
+                    <img src="Bebidas1.jpeg" alt="Bebidas">
                     <div class="card-content">
-                        <h3>Vinos</h3>
-                        <p>Vinos con Altura</p>
-                        <div class="price">$15.000</div>
-                        <button class="orden-btn" onclick="pedir('Vinos')">
-                            Pedir
-                        </button>
-                    </div>
+                        <h3>Bebidas</h3>
+                        <a href="bebidas.html" class="btn">Ver</a>
                 </div>
 
             </div>
@@ -114,79 +73,97 @@
 
         <!--------GALERIA------------->
         <section class="section" id="galeria">
-            <h2 class="title">Galeria</h2>
+            <h2 class="title">Galería</h2>
             <div class="gallery">
-                <img src="OIP-lampreado.webp" alt="Lampreado">
-                <img src="OIP-tortilla.webp" alt="Tortilla">
-                <img src="OIP-picante de pollo.webp" alt="Picante de Pollo">
-                <img src="OIP-lomo de llama.webp" alt="Lomo de Llama">
+                <img src="Galeria1.jpeg" alt="">
+                <img src="Galeria2.jpeg" alt="">
+                <img src="Galeria3.jpeg" alt="">
+                <img src="Galeria4.jpeg" alt="">
             </div>
         </section>
 
         <!---------NOSOTROS------------>
-        <section class="section" id="nosotros">
-            <h2 class="title">Nosotros</h2>
-            <div class="about">
-                <p class="text-blanco">En nuestras manos vivi la pasión de nuestros platos.
-                    Entre montañas, con sus colores intensos y atrapantes,
-                    creamos una experiencia única
-                </p>
-            </div>
-        </section>
+<!---------NOSOTROS------------>
+<section id="nosotros">
 
-        <!--------CONTACTO------------->
+    <!-- Hero solo con título -->
+    <div class="nosotros-hero">
+        <h2 class="title">Nosotros</h2>
+    </div>
+
+    <!-- Fila 1: imagen izquierda, texto derecha -->
+    <div class="nosotros-fila">
+        <img src="Nosotros1.png" alt="Nosotros">
+        <p>Somos un restaurante comprometido con la excelencia y la autenticidad. Nuestra cocina nace de la pasión por los sabores genuinos y el respeto por los ingredientes de la región.</p>
+    </div>
+
+    <!-- Fila 2: texto izquierda, imagen derecha -->
+    <div class="nosotros-fila nosotros-fila--invertida">
+        <p>Enmarcados por un paisaje de montañas imponentes, de colores vivos e inconfundibles, ofrecemos a nuestros comensales mucho más que una comida: una experiencia sensorial completa, donde cada detalle está pensado para que disfrutes un momento verdaderamente especial.</p>
+        <img src="Nosotros2.png" alt="Nosotros">
+    </div>
+
+</section>
+  <!--------CONTACTO------------->
         <section class="section" id="contacto">
-            <h2 class="title">Contacto</h2>
-            <div class="contact-box">
-                <input type="text" placeholder="Nombre completo">
-                <input type="email" placeholder="Tu email">
-                <input type="text" placeholder="Tu mensaje">
-                <button class="btn">
-                    Enviar Mensaje
-                </button>
-            </div>
-        </section>
-
-        <!---------CARRITO--------------->
-        <div id="cart">
-            Pedidos: <span id="contador">0</span>
-        </div>
-
+  <h2 class="title">Contacto</h2>
+  <form class="contact-box" action="#contacto" method="get">
+    <input type="text" name="nombre" placeholder="Nombre completo">
+    <input type="email" name="email" placeholder="Tu email">
+    <input type="text" name="mensaje" placeholder="Tu mensaje">
+    <button class="btn" type="submit">Enviar Mensaje</button>
+  </form>
+</section>
+    </main>
     </main>
 
     <!-------FOOTER-------->
     <footer>
-        <p>2026 Manos Jujeñas - Jujuy Argentina</p>
-    </footer>
+    <div class="footer-grid">
 
-    <script>
-        let contador = 0;
+        <div class="footer-col">
+            <h3>Manos Jujeñas</h3>
+            <p>Cocina tradicional del norte argentino, entre montañas y sabores únicos.</p>
+        </div>
 
-        function pedir(item) {
-            contador++;
-            document.getElementById('contador').textContent = contador;
-            alert('Agregaste: ' + item + '\nTotal de pedidos: ' + contador);
-        }
+        <div class="footer-col">
+            <h3> Dónde estamos</h3>
+            <p>Ciudad de Mendoza, Argentina</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26804.487780800097!2d-68.879118654041!3d-32.883333511615234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e093ec45179bf%3A0x205a78f6d20efa3a!2sMendoza%2C%20Capital%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1781818377161!5m2!1ses-419!2sar"
+                width="100%"
+                height="180"
+                style="border-radius: 10px; border: none; margin-top: 10px;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
 
-        function irMenu() {
-            document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
-        }
+        <div class="footer-col">
+            <h3>Seguinos</h3>
+            <div class="footer-redes">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> Instagram
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"> Facebook
+                </a>
+                <a href="https://wa.me" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp
+                </a>
+            </div>
+        </div>
 
-        function filtrar(valor) {
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(function(card) {
-                if (valor === 'all') {
-                    card.style.display = 'block';
-                } else {
-                    if (card.classList.contains(valor)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }
-            });
-        }
-    </script>
+    </div>
 
+    <div class="footer-bottom">
+        <p>© 2026 Manos Jujeñas — Mendoza, Argentina. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/2616638461" target="_blank" class="whatsapp-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    <span>Haga su pedido acá</span>
+</a>
 </body>
 </html>

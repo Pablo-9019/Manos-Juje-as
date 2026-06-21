@@ -1,0 +1,66 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+/*-------NAVBAR---------*/
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $color-principal;
+    backdrop-filter: blur(8px);
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    z-index: 1000;
+}
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: $color-secundario;
+}
+/*------HERO---------*/
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(rgba(90, 66, 66, 0.7), rgba(0,0,0,.7)), url('../Jujuy.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero-content h1{
+    font-family: $font-titulo;
+    font-size: 6rem;
+    color: $color-blanco;
+    text-shadow: 0 0 20px #1b103a;
+}
+.hero-content p{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    max-width: 800px;
+}
+
+.hero-small {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(rgba(90, 66, 66, 0.7), rgba(0,0,0,.7)), url('../Jujuy.jpg');
+    background-size: cover;
+    background-position: center;
+}
